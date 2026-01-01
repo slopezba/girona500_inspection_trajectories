@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(girona500_inspection_trayectories)
+project(girona500_inspection_trajectories)
 
 ## Compile as C++11 (safe default for Noetic)
 add_compile_options(-std=c++11)

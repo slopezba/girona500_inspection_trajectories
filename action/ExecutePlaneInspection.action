@@ -1,9 +1,26 @@
-# Goal
+# ===============================
+# ExecuteInspectionPath.action
+# ===============================
+
+# -------- Goal --------
 bool start
+
 ---
-# Result
+# -------- Result --------
 bool success
 string message
+
 ---
-# Feedback
-float32 progress
+# -------- Feedback --------
+int32 current_index
+int32 total_points
+
+float64 distance_to_waypoint        # [m]
+float64 yaw_plane_error              # [deg]
+
+geometry_msgs/PoseStamped current_pose
+geometry_msgs/PoseStamped next_waypoint_pose
+
+float64 time_remaining              # [s]
+
+geometry_msgs/Twist body_cmd_vel    # expressed in base_link

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>girona500_inspection_trayectories</name>
+  <name>girona500_inspection_trajectories</name>
   <version>0.0.1</version>
   <description>
     Plane-based inspection trajectory planning and execution framework

@@ -1,13 +1,13 @@
 <launch>
 
   <!-- Plane inspection manager node -->
-  <node pkg="girona500_inspection_trayectories"
+  <node pkg="girona500_inspection_trajectories"
         type="plane_inspection_node.py"
         name="plane_inspection"
         output="screen">
 
     <!-- Load initial parameters (same as dynamic reconfigure defaults) -->
-    <rosparam file="$(find girona500_inspection_trayectories)/config/plane_inspection.yaml" />
+    <rosparam file="$(find girona500_inspection_trajectories)/config/plane_inspection.yaml" />
 
   </node>
 

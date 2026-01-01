@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 import rospy
 import numpy as np
+import actionlib
 from enum import Enum
+from geometry_msgs.msg import Twist
+from nav_msgs.msg import Odometry
 
 from nav_msgs.msg import Path
 from geometry_msgs.msg import PoseStamped
@@ -13,13 +16,19 @@ import tf.transformations as tf
 
 # Dynamic reconfigure
 from dynamic_reconfigure.server import Server
-from girona500_inspection_trayectories.cfg import InspectionPlannerConfig
-
+from girona500_inspection_trajectories.cfg import InspectionPlannerConfig
 
 # Service (trigger-only)
-from girona500_inspection_trayectories.srv import (
+from girona500_inspection_trajectories.srv import (
     PlanInspectionPath,
     PlanInspectionPathResponse
+)
+
+
+from girona500_inspection_trajectories.msg import (
+    ExecutePlaneInspectionAction,
+    ExecutePlaneInspectionFeedback,
+    ExecutePlaneInspectionResult
 )
 
 
